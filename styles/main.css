@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: mangat;
+    src: url(style/mangat.ttf);
+}
+body {
+    background-color: lightgrey;
+}
+
+.uvod{
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/*vzdialenost top odkazov od hran*/
+nav{
+    background: linear-gradient(to bottom, rgb(17, 249, 40), rgba(255, 122, 90,0));
+    display: flex;
+    padding: 0% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+/*velkost loga hover zvecsenie*/
+nav img{
+    width: 100px;
+    height: 100px;
+    transition:transform 0.25s ease;
+}
+
+nav img:hover {
+    -webkit-transform:scale(1.5);
+    transform:scale(1.5);
+}
+
+/*responzivita a set okazov z prava*/
+.nav-odkazy{
+    flex: 1;
+    text-align: right;
+}
+/*medzery medzi odkazmi a za sebou*/
+.nav-odkazy ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 5px;
+    position: relative;
+}
+/*text odkazov*/
+.nav-odkazy ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+}
+/*animacia hoveru*/
+.nav-odkazy ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-odkazy ul li:hover::after{
+    width: 100%;
+}
+.uvod-text{
+    width: 70%;
+    color: #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.uvod-text h1{
+    font-family: mangat, sans-serif;
+    font-size: 80px;
+}
+.uvod-text p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+}
